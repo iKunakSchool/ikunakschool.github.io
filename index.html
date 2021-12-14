@@ -1,1025 +1,418 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>iKunakSchool</title>
-
-
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta name="theme-color" content="#ffffff">
-  <meta data-n-head="ssr" name="viewport"
-    content="width=device-width,viewport-fit=cover,initial-scale=1,maximum-scale=1,user-scalable=0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-  href="./files/module.css">
+    <title>iKunakSchool</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-  <section class="container-callkeeper-global precision-callkeeper-double"
-    style="position: absolute; left: 0; top: 0; z-index: 99999;">
-    <figure style="width:0px;display:none;" id="scrollArrowCallKeeper" class="callkeeper figureStyle"><svg
-        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-        viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-        <path fill="#aaaaaa"
-          d="M77.068,74.628c0-0.026,0.003-0.052,0.003-0.078c0-0.013-0.003-0.023-0.004-0.036L77.006,56.03  c0-3.896-2.973-7.065-6.626-7.065c-1.405,0-2.681,0.403-3.729,1.105c-0.531-3.269-3.165-5.685-6.437-5.685  c-1.44,0-2.754,0.473-3.823,1.274c-0.806-2.847-3.27-4.868-6.265-4.868c-1.322,0-2.537,0.397-3.556,1.079v-7.875  c4.322-2.3,6.997-6.826,6.997-11.9c0-7.484-6.093-13.573-13.582-13.573c-7.486,0-13.577,6.089-13.577,13.573  c0,5.012,2.699,9.527,7.069,11.913v19.299c-1.661-2.636-3.267-4.512-3.372-4.633c-2.515-2.948-5.642-3.591-8.811-1.813  c-3.196,1.802-4.215,5.854-2.319,9.226l0.137,0.243l0.215,0.178c0.056,0.046,5.588,4.709,6.843,13.463  c0.763,5.246,1.509,9.845,2.921,12.995c0.095,0.213,0.243,0.38,0.41,0.521c2.042,4.716,7.517,11.375,22.164,11.375h3.506  c13.183,0,21.236-7.032,21.842-18.875c0.034-0.128,0.06-0.26,0.059-0.398L77.068,74.628z M29.408,22.096  c0-5.83,4.745-10.573,10.577-10.573c5.834,0,10.582,4.743,10.582,10.573c0,3.419-1.475,6.405-3.997,8.332v-7.926  c0-3.869-2.878-6.899-6.552-6.899c-3.667,0-6.541,3.03-6.541,6.899v7.911C30.938,28.433,29.408,25.411,29.408,22.096z   M55.171,91.862h-3.506c-10.416,0-17.443-3.74-19.788-10.53c-0.096-0.277-0.267-0.506-0.48-0.677  c-0.993-2.784-1.617-6.702-2.258-11.112c-1.278-8.917-6.463-14.056-7.661-15.138c-0.939-1.885-0.407-3.973,1.288-4.928  c1.184-0.665,2.998-1.269,5.063,1.153c0.04,0.046,3.944,4.607,5.648,9.293v3.202c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5  V22.502c0-2.223,1.522-3.899,3.541-3.899c2.025,0,3.552,1.676,3.552,3.899v25.196v8.66v3.395c0,0.828,0.671,1.5,1.5,1.5  s1.5-0.672,1.5-1.5v-3.395v-8.66c0-2.227,1.529-3.905,3.556-3.905c2.021,0,3.545,1.679,3.545,3.905v3.593v5.066v3.395  c0,0.828,0.672,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3.395v-5.066c0-2.227,1.523-3.905,3.543-3.905c2.019,0,3.541,1.679,3.541,3.905v4.43  v0.637v4.202c0,0.828,0.672,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-4.202v-0.637c0-2.176,1.524-3.755,3.625-3.755  c1.999,0,3.626,1.823,3.626,4.069l0.062,18.631C74.001,90.182,60.839,91.862,55.171,91.862z">
-        </path>
-        <path fill="#aaa"
-          d="M54.813,29.18c-0.456,0.691-0.266,1.622,0.426,2.078l4.26,2.809c0.019,0.012,0.039,0.016,0.058,0.027  c0.082,0.049,0.167,0.086,0.255,0.118c0.041,0.015,0.08,0.035,0.121,0.046c0.124,0.034,0.252,0.054,0.381,0.055  c0.004,0,0.007,0.001,0.011,0.001h0.001h0.001c0.004,0,0.007-0.001,0.011-0.001c0.129-0.001,0.257-0.021,0.382-0.055  c0.04-0.011,0.078-0.03,0.118-0.045c0.09-0.033,0.176-0.071,0.259-0.121c0.018-0.011,0.038-0.014,0.056-0.026l4.257-2.809  c0.691-0.456,0.882-1.387,0.426-2.078c-0.457-0.693-1.39-0.882-2.078-0.426l-1.933,1.275c0-0.007,0.002-0.013,0.002-0.02V9.428  l1.932,1.273c0.254,0.167,0.54,0.248,0.824,0.248c0.487,0,0.965-0.237,1.253-0.674c0.456-0.691,0.266-1.622-0.427-2.078L61.165,5.4  c-0.001,0-0.002-0.001-0.004-0.002l-0.003-0.002c0,0,0,0-0.001,0L61.15,5.39c-0.022-0.015-0.046-0.023-0.068-0.036  c-0.062-0.036-0.122-0.071-0.188-0.098c-0.042-0.018-0.085-0.027-0.128-0.04c-0.051-0.016-0.101-0.034-0.153-0.044  c-0.054-0.01-0.107-0.012-0.161-0.016c-0.038-0.003-0.076-0.011-0.115-0.012c-0.004,0-0.007-0.001-0.011-0.001  c-0.003,0-0.006,0.001-0.009,0.001c-0.046,0-0.09,0.009-0.135,0.013c-0.047,0.004-0.095,0.005-0.142,0.015  c-0.058,0.011-0.112,0.031-0.168,0.048c-0.038,0.012-0.076,0.02-0.113,0.035c-0.003,0.001-0.007,0.002-0.01,0.003  c-0.062,0.025-0.116,0.059-0.173,0.092c-0.007,0.004-0.015,0.007-0.021,0.011C59.537,5.372,59.518,5.378,59.5,5.39l-0.005,0.003  c-0.001,0.001-0.002,0.001-0.003,0.002l-0.004,0.002c-0.001,0.001-0.002,0.001-0.003,0.002L55.24,8.197  c-0.691,0.456-0.883,1.386-0.428,2.078c0.289,0.438,0.767,0.675,1.254,0.675c0.283,0,0.57-0.08,0.824-0.248l1.935-1.275v20.583  c0,0.007,0.002,0.013,0.002,0.02l-1.936-1.276C56.2,28.298,55.27,28.487,54.813,29.18z">
-        </path>
-      </svg></figure>
-    <!--?xml version="1.0" encoding="utf-8"?--><svg version="1.1" id="Capa_1" class="callkeeper_class_ck_svg"
-      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      viewBox="0 0 1094 86.8" style="enable-background:new 0 0 1094 86.8;" xml:space="preserve">
-      <style type="text/css">
-        .container-callkeeper-global .st0 {
-          fill: none;
-        }
-      </style>
-      <g id="dynamic-geo-icon">
-        <path id="dynamic-geo-icon-internal"
-          d="M659.9,30.1c-0.2-0.7-0.6-1.4-0.8-2.1c-3.3-7.9-10.5-10.7-16.3-10.7		c-7.8,0-16.4,5.2-17.5,16v2.2c0,0.1,0,0.9,0.1,1.3c0.6,5.1,4.7,10.6,7.7,15.7c3.3,5.5,6.6,10.9,10,16.3c2.1-3.5,4.1-7.1,6.1-10.5		c0.5-1,1.2-2,1.7-3c0.4-0.6,1.1-1.3,1.4-1.9c3.3-5.9,8.5-11.9,8.5-17.8v-2.4C660.8,32.5,660,30.2,659.9,30.1z M642.9,41.1		c-2.3,0-4.8-1.1-6-4.3c-0.2-0.5-0.2-1.5-0.2-1.6v-1.4c0-4,3.4-5.9,6.4-5.9c3.7,0,6.5,2.9,6.5,6.6C649.6,38.2,646.6,41.1,642.9,41.1		z">
-        </path>
-      </g>
-      <g id="callKeeper-logo-thin">
-        <path id="_x33_"
-          d="M142,4.9c-21.1,0-38.2,17.1-38.2,38.2s17.1,38.2,38.2,38.2c8.7,0,17.1-2.4,23.1-7.8c7.3-6.6,1.4-11.1-4-12.6		c0.2-0.7,0.4-1.3,0.4-1.6c0.5-3.6-12.8-8.9-14.6-5.3c-0.5,1-1.2,4-4.2,2.2c-2.1-1.3-12.6-11.8-13.9-13.9c-1.8-3.1,1.2-3.7,2.2-4.2		c3.6-1.8-1.6-15.1-5.3-14.6c-0.8,0.1-5.8,1.7-6.8,2.2c-2,0.9-4.7,5.6-2.9,11.5c1.4,4.5,4,11.4,12.2,19.6s15.1,10.8,19.6,12.2		c5.9,1.8,10.6-0.9,11.5-2.9c0.1-0.2,0.2-0.5,0.4-0.9c5.6,1.4,4.2,4,1.3,6c-4.9,3.4-12,5.6-19.1,5.6c-18.6,0-33.7-15.1-33.7-33.7		s15.1-33.7,33.7-33.7s33.7,15.1,33.7,33.7c0,7.1-1.7,11.6-3.9,15.3c-1.7,3.4-0.6,8.1,0.7,7C177.5,60,180,51,180,43.2		C180.2,22,163.1,4.9,142,4.9z">
-        </path>
-        <path id="_x32_"
-          d="M139.2,29.9c-1.4,0-2.5,1.1-2.5,2.5s1.1,2.5,2.5,2.5c3.1,0,5.9,1.2,8,3.2c2,2,3.3,4.7,3.3,7.8		c0,1.4,1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5c0-4.4-1.8-8.4-4.7-11.3C147.7,31.7,143.6,29.9,139.2,29.9z">
-        </path>
-        <path id="_x31_"
-          d="M162.3,47c2.4,0,2.5-2.5,2.5-2.5c0-6.6-2.7-12.6-7.1-16.9c-4.4-4.3-10.5-7-17.2-7c-1.4,0-2.5,1.1-2.5,2.5		s1.1,2.5,2.5,2.5c5.4,0,10.2,2.1,13.7,5.6c3.5,3.4,5.6,8.2,5.7,13.4C159.8,44.7,159.8,47,162.3,47z">
-        </path>
-      </g>
-      <g id="corner-cross-in-circle">
-        <path id="_x37_"
-          d="M353.5,54c-0.1,0-0.6-0.5-0.7-0.6l-9.8-9.9L332.4,54c-0.1,0.1-0.8,0.5-0.8,0.4c-0.1-0.1,0.4-0.8,0.4-0.9		L342.6,43l-10.4-10.4c-0.1-0.1-0.7-0.9-0.6-1s1,0.6,1.1,0.6L343,42.6l10.7-10.7c0.1-0.1,0.7-0.4,0.7-0.3s-0.2,0.7-0.3,0.7L343.4,43		l10.3,10.4c0.1,0.1,0.9,1.1,0.8,1.1C354.5,54.6,353.7,54.1,353.5,54z">
-        </path>
-        <path id="_x38_"
-          d="M343,84.4c-22.8,0-41.4-18.6-41.4-41.4S320.2,1.6,343,1.6s41.4,18.6,41.4,41.4S365.8,84.4,343,84.4z M343,2.4		c-22.4,0-40.6,18.2-40.6,40.6s18.2,40.6,40.6,40.6s40.6-18.2,40.6-40.6S365.4,2.4,343,2.4z">
-        </path>
-      </g>
-      <g id="corner-cross">
-        <polygon id="corner-cross-icon"
-          points="286.3,3.1 283.7,0.4 243.2,40.8 202.7,0.4 200,3.1 240.5,43.5 200,84 202.7,86.7		243.2,46.2 283.7,86.7 286.3,84 245.9,43.5 	">
-        </polygon>
-      </g>
-      <g id="mobile-button-tube">
-        <path id="mobile-button-tube-internal"
-          d="M767.8,58.8l-0.3-0.8c-0.6-1.8-2.6-3.7-4.4-4.2l-6.7-1.8c-1.8-0.5-4.4,0.2-5.8,1.5		l-2.4,2.4c-8.8-2.4-15.8-9.3-18.2-18.2l2.4-2.4c1.3-1.3,2-3.9,1.5-5.8l-1.8-6.7c-0.5-1.8-2.4-3.8-4.2-4.4l-0.8-0.3		c-1.8-0.6-4.4,0-5.7,1.3l-3.6,3.6c-0.6,0.6-1.1,2.5-1.1,2.5c-0.1,11.6,4.4,22.7,12.6,30.9c8.1,8.1,19.2,12.7,30.7,12.6		c0.1,0,2-0.4,2.6-1.1l3.6-3.6C767.8,63.1,768.4,60.6,767.8,58.8L767.8,58.8z">
-        </path>
-      </g>
-      <g id="check-box-icon">
-        <path
-          d="M964.4,77h-60.8c-2,0-3.6-1.6-3.6-3.6V12.6c0-2,1.6-3.6,3.6-3.6h60.8c2,0,3.6,1.6,3.6,3.6v0.6l-2.4,2.6v-3.2		c0-0.7-0.5-1.2-1.2-1.2h-60.8c-0.7,0-1.2,0.5-1.2,1.2v60.8c0,0.7,0.5,1.2,1.2,1.2h60.8c0.7,0,1.2-0.5,1.2-1.2V41.5L968,39v34.4		C968,75.4,966.4,77,964.4,77z">
-        </path>
-        <polygon id="_x3C_Контур_x3E_"
-          points="979.6,18.7 977.5,16.5 931.9,62.1 907.2,37.4 905.1,39.5 931.9,66.3 931.9,66.2		932,66.3 	"></polygon>
-        <rect x="900" y="9" class="st0" width="79.6" height="68"></rect>
-      </g>
-      <g id="check-box">
-        <path
-          d="M1062.9,77.4h-59.6c-2.3,0-4.2-1.9-4.2-4.2V13.6c0-2.3,1.9-4.2,4.2-4.2h59.6c2.3,0,4.2,1.9,4.2,4.2v59.6		C1067.1,75.5,1065.2,77.4,1062.9,77.4z M1003.3,11.7c-1.1,0-1.9,0.9-1.9,1.9v59.6c0,1.1,0.9,1.9,1.9,1.9h59.6		c1.1,0,1.9-0.9,1.9-1.9V13.6c0-1.1-0.9-1.9-1.9-1.9C1062.9,11.7,1003.3,11.7,1003.3,11.7z">
-        </path>
-        <rect x="1017.4" y="34.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 260.6225 736.1193)" class="st0"
-          width="3" height="37.9"></rect>
-        <rect x="1020.5" y="41.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 278.3531 757.9675)" class="st0"
-          width="67.3" height="3"></rect>
-        <rect x="999.1" y="9.2" class="st0" width="79.6" height="68"></rect>
-      </g>
-      <g id="constellation-mobile-icon">
-        <path id="rtrtr"
-          d="M457.5,51.1c-2.7,0-5.1,1.3-6.6,3.2L436.6,47c0.2-0.7,0.3-1.4,0.3-2.2s-0.2-1.6-0.4-2.4l14.3-7.3		c1.5,2,4,3.4,6.7,3.4c4.7,0,8.5-3.8,8.5-8.4c0-4.7-3.8-8.4-8.5-8.4s-8.4,3.8-8.4,8.4c0,0.8,0.1,1.5,0.3,2.2l-14.3,7.3		c-1.5-2-3.9-3.2-6.6-3.2c-4.7,0-8.4,3.8-8.4,8.4s3.8,8.4,8.4,8.4c2.8,0,5.2-1.3,6.7-3.4l14.3,7.3c-0.2,0.8-0.4,1.5-0.4,2.4		c0,4.7,3.8,8.4,8.4,8.4c4.7,0,8.5-3.8,8.5-8.4C466,54.9,462.2,51.1,457.5,51.1z">
-        </path>
-      </g>
-      <g id="star-mobile-icon">
-        <path id="star-mobile-icon-internal"
-          d="M842.7,19.6l6.4,15.3l16.5,1.4c1.1,0.1,1.6,1.5,0.7,2.3l-12.5,10.8l3.8,16.1		c0.3,1.1-1,2-1.9,1.4l-14.2-8.6L827.3,67c-1,0.6-2.2-0.3-1.9-1.4l3.8-16.1l-12.5-10.8c-0.9-0.8-0.4-2.2,0.7-2.3l16.5-1.4l6.4-15.3		C840.7,18.6,842.2,18.6,842.7,19.6z">
-        </path>
-      </g>
-      <g id="circle-dynamic-icon">
-        <circle id="circle-dynamic-icon-internal" cx="43.1" cy="43.1" r="43"></circle>
-      </g>
-      <g id="callkeeper-logo-small">
-        <circle id="_x33_3" cx="543" cy="43" r="43"></circle>
-        <g>
-          <path id="_x36_"
-            d="M540.2,29.8c-1.4,0-2.5,1.1-2.5,2.5c0,1.4,1.1,2.5,2.5,2.5c3.1,0,5.9,1.2,8,3.2c2,2,3.3,4.7,3.3,7.8			c0,1.4,1.1,2.5,2.5,2.5c1.4,0,2.5-1.1,2.5-2.5c0-4.4-1.8-8.4-4.7-11.3C548.7,31.6,544.6,29.8,540.2,29.8z">
-          </path>
-          <path id="_x35_"
-            d="M563.3,46.8c2.4,0,2.5-2.5,2.5-2.5c0-6.6-2.7-12.6-7.1-16.9c-4.4-4.3-10.5-7-17.2-7c-1.4,0-2.5,1.1-2.5,2.5			c0,1.4,1.1,2.5,2.5,2.5c5.4,0,10.2,2.1,13.7,5.6c3.5,3.4,5.6,8.2,5.7,13.4C560.8,44.4,560.8,46.8,563.3,46.8z">
-          </path>
-          <path id="_x34_"
-            d="M543,4.8c-21.1,0-38.2,17.1-38.2,38.2c0,21.1,17.1,38.2,38.2,38.2c8.7,0,17.1-2.4,23.1-7.8			c7.3-6.6,1.4-11.1-4-12.6c0.2-0.7,0.4-1.3,0.4-1.6c0.5-3.6-12.8-8.9-14.6-5.3c-0.5,1-1.2,4-4.2,2.2c-2.1-1.3-12.6-11.8-13.9-13.9			c-1.8-3.1,1.2-3.7,2.2-4.2c3.6-1.8-1.6-15.1-5.3-14.6c-0.8,0.1-5.8,1.7-6.8,2.2c-2,0.9-4.7,5.6-2.9,11.5c1.4,4.5,4,11.4,12.2,19.6			c8.2,8.2,15.1,10.8,19.6,12.2c5.9,1.8,10.6-0.9,11.5-2.9c0.1-0.2,0.2-0.5,0.4-0.9c5.6,1.4,4.2,4,1.3,6c-4.9,3.4-12,5.6-19.1,5.6			c-18.6,0-33.7-15.1-33.7-33.7c0-18.6,15.1-33.7,33.7-33.7c18.6,0,33.7,15.1,33.7,33.7c0,7.1-1.7,11.6-3.9,15.3			c-1.7,3.4-0.6,8.1,0.7,7c5.1-5.4,7.6-14.4,7.6-22.2C581.2,21.9,564.1,4.8,543,4.8z">
-          </path>
-        </g>
-      </g>
-    </svg>
-    <div class="ck-reset-style-widget full_widget ckContainer" style="display:none;" id="dragButtonVladan" dragged="">
-      <div class="widget_small a-widget_small b-widget_small" id="showLogoBox">
-        <div class="" id="fulllogo"><svg style="display:none;" id="theLogoOriginal" class="ckLogo ckStandart"
-            drag="dragButtonVladan" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="70px" height="70px"
-            viewBox="0 0 85.171 85.172" enable-background="new 0 0 85.171 85.172" xml:space="preserve">
-            <path drag="dragButtonVladan" class="svgb" fill="#3498db "
-              d="M39.422,27.836c-1.516,0-2.747,1.232-2.747,2.748c0,1.519,1.229,2.748,2.747,2.748c3.479,0.001,6.6,1.381,8.869,3.606c2.266,2.234,3.649,5.271,3.65,8.652c0,1.516,1.231,2.747,2.748,2.747c1.518,0,2.747-1.231,2.747-2.747c0.001-4.908-2.033-9.371-5.293-12.571C48.886,29.816,44.374,27.836,39.422,27.836z">
-            </path>
-            <path drag="dragButtonVladan" class="svgb" fill="#3498db "
-              d="M65.183,46.842c2.729,0,2.75-2.77,2.747-2.8c-0.013-7.352-3.061-14.025-7.951-18.825c-4.897-4.82-11.68-7.8-19.138-7.798c-1.519,0-2.748,1.231-2.748,2.749c0,1.517,1.229,2.747,2.748,2.747c5.986,0,11.374,2.377,15.287,6.22c3.903,3.841,6.299,9.101,6.309,14.934C62.435,44.103,62.412,46.842,65.183,46.842z">
-            </path>
-            <path drag="dragButtonVladan" class="svgb" fill="#3498db "
-              d="M42.585,0C19.066,0,0,19.067,0,42.586s19.066,42.586,42.585,42.586c9.69,0,19.109-2.65,25.776-8.688c8.114-7.346,1.566-12.403-4.469-14.013c0.242-0.833,0.42-1.504,0.459-1.779c0.573-4.045-14.233-9.87-16.237-5.861c-0.559,1.112-1.306,4.431-4.713,2.399c-2.379-1.422-14.07-13.11-15.489-15.49c-2.032-3.405,1.286-4.153,2.398-4.709c4.01-2.004-1.815-16.813-5.86-16.238c-0.941,0.134-6.423,1.849-7.586,2.404c-2.21,1.058-5.286,6.245-3.267,12.875c1.522,5,4.458,12.752,13.59,21.883c9.133,9.131,16.882,12.068,21.885,13.591c6.629,2.019,11.816-1.057,12.875-3.268c0.103-0.216,0.247-0.58,0.412-1.037c6.288,1.512,4.667,4.51,1.501,6.726c-5.445,3.811-13.376,6.218-21.274,6.218c-20.765,0-37.6-16.833-37.601-37.599c0-20.766,16.836-37.601,37.601-37.601c20.767,0,37.601,16.835,37.601,37.601c0,7.869-1.854,12.983-4.337,17.016c-1.941,3.799-0.702,9.027,0.8,7.752c5.7-6.043,8.522-16.003,8.522-24.768C85.171,19.067,66.105,0,42.585,0z">
-            </path>
-          </svg></div>
-      </div>
-      <div drag="dragButtonVladan" class="widget a-widget b-widget" role="dialog" id="widgetLeft">
-        <div drag="dragButtonVladan" class="text a-text b-text" id="leftDescription">
-          <p drag="dragButtonVladan" id="textLeft" class="ckStyle"></p>
-        </div>
-        <div noselect="" id="leftScheduled" class="ckInlineBlock"></div>
-        <div drag="dragButtonVladan">
-          <!--<input class="input a-input b-input" id="phone_left" autocomplete="off"type="num" name="number" maxlength="16">-->
-          <div class="ckFlagMultiBox ckFlagMultiBox_mainContainer" id="ckFlagMultiBoxActiveLeft">
-            <div class="ckStandartWidgetInput"><input type="text" class="ckStandartWidgetInput_inputBlock"
-                placeholder="Введите номер"></div>
-            <div class="ckWidgetInputWithFlags">
-              <div class="ckWidgetInputWithFlags_flagsBlock">
-                <div class="ckWidgetInputWithFlags_flagsBlock_icon"></div>
-                <div class="ckWidgetInputWithFlags_flagsBlock_donPointer">
-                  <div class="ckWidgetInputWithFlags_flagsBlock_donPointer_triangle"></div>
-                </div>
-              </div>
-              <div class="ckWidgetInputWithFlags_separator"></div><input type="text"
-                class="ckWidgetInputWithFlags_inputBlock" id="ckWidgetInputWithFlags_inputBlockActiveLeft"
-                placeholder="Введите номер">
-            </div>
-            <div class="ckCountryFlagsSelect"></div>
-          </div>
-        </div>
-        <div drag="dragButtonVladan" class="true a-true b-true" tabindex="0" id="ck_left_okay"><input
-            id="companyButtonLeft" type="submit" class="callkeeperWidget_submit rollUp"></div>
-        <div drag="dragButtonVladan" class="false a-false b-false" id="exitLeft"><span noselect=""
-            class="svgExit ckOpacity"><span drag="dragButtonVladan" id="noThanksLeft"
-              class="crossText ckCross"></span><svg noselect="" xmlns="http://www.w3.org/2000/svg" width="18"
-              height="18" viewBox="0 0 50 50">
-              <path fill="#444"
-                style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans"
-                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 L 7.71875 6.28125 z"
-                color="#333" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"></path>
-            </svg></span></div>
-      </div>
-      <div drag="dragButtonVladan" class="widget_right a-widget_right b-widget_right" role="dialog" id="widgetRight">
-        <div drag="dragButtonVladan" class="text a-text b-text" id="rightDescription">
-          <p drag="dragButtonVladan" id="textRight" class="ckStyle"></p>
-        </div>
-        <div noselect="" id="rightScheduled" class="ckInlineBlock"></div>
-        <div drag="dragButtonVladan">
-          <!--<input class="input a-input b-input" id="phone_right" autocomplete="off"type="num" name="number" maxlength="16">-->
-          <div class="ckFlagMultiBox ckFlagMultiBox_mainContainer" id="ckFlagMultiBoxActive">
-            <div class="ckStandartWidgetInput"><input type="text" class="ckStandartWidgetInput_inputBlock"
-                placeholder="Введите номер"></div>
-            <div class="ckWidgetInputWithFlags">
-              <div class="ckWidgetInputWithFlags_flagsBlock">
-                <div class="ckWidgetInputWithFlags_flagsBlock_icon"></div>
-                <div class="ckWidgetInputWithFlags_flagsBlock_donPointer">
-                  <div class="ckWidgetInputWithFlags_flagsBlock_donPointer_triangle"></div>
-                </div>
-              </div>
-              <div class="ckWidgetInputWithFlags_separator"></div><input type="text"
-                class="ckWidgetInputWithFlags_inputBlock" id="ckWidgetInputWithFlags_inputBlockActiveRight"
-                placeholder="Введите номер">
-            </div>
-            <div class="ckCountryFlagsSelect"></div>
-          </div>
-        </div>
-        <div drag="dragButtonVladan" class="true a-true b-true" tabindex="0" id="ck_right_okay"><input
-            id="companyButtonRight" type="submit" class="callkeeperWidget_submit rollUp"></div>
-        <div drag="dragButtonVladan" class="false a-false" id="exitRight"><span noselect=""
-            class="svgExit ckOpacity"><span drag="dragButtonVladan" id="noThanksRight"
-              class="crossText ckCross"></span><svg noselect="" xmlns="http://www.w3.org/2000/svg" width="18"
-              height="18" viewBox="0 0 50 50">
-              <path fill="#444"
-                style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans"
-                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 L 7.71875 6.28125 z"
-                color="#333" overflow="visible" enable-background="accumulate" font-family="Bitstream Vera Sans"></path>
-            </svg></span></div>
-      </div>
-    </div>
-    <div dragged="" id="ck_phone_widget" class="callkeeper_phonewidget ck_inactive">
-      <div drag="ck_phone_widget" class="callkeeper_circle1"></div>
-      <div drag="ck_phone_widget" class="callkeeper_circle2"></div>
-      <div drag="ck_phone_widget" class="callkeeper_circle3"></div>
-      <div drag="ck_phone_widget" class="callkeeper_circle4"></div>
-      <div drag="ck_phone_widget" id="ck_act_wid_circ" class="callkeeper_img_circle"></div>
-    </div>
-    <section class="ck-reset-style-section" id="feetBackPackage" style="display:none;">
-      <div dragged="" class="ck-reset-style-widget displayInlineBlock invisible redactForm fadeOut animated"
-        id="myBestWidget">
-        <div class="close-icon-carrier">
-          <figure id="youClose" class="dynamicIcon newFieldForm closeImg"></figure><svg viewBox="300 0 86 86"
-            class="feedback-cross-circle">
-            <use xlink:href="#corner-cross-in-circle"></use>
-          </svg>
-        </div>
-        <div class="callkeeperMain mainWorkFrame displayInlineBlock">
-          <form onsubmit="return false">
-            <header class="hdrCls ckStyle">
-              <h3 drag="myBestWidget" id="callkeeperTitleForm" class="headerHtml valueTitle" onmousedown="return false"
-                onselectstart="return false">
-                <div class="ckImage ckGraphic ckHeader"></div>
-              </h3>
-              <div id="callkeeperSecondMessage" class="textArea ShortPost"></div>
-            </header>
-            <section>
-              <div class="ckContainer input newFieldForm specialField"><input type="text" id="specialField"
-                  placeholder="Введите ваше имя" class="class InputText newFieldForm" maxlength="25">
-                <blockquote></blockquote>
-              </div>
-              <div class="ckContainer input newFieldForm specialSelect"><select class="classSelectPoint newFieldForm"
-                  id="specialSelect"></select></div><textarea id="youQuestion" class="textA blockS"
-                placeholder="Введите ваш вопрос"></textarea> <button id="youSend" class="callK anyB senBut"></button>
-            </section>
-            <footer class="footerLine ckStyle"><a id="serviceProvidedAnchor" class="aFooter ckStyle"></a></footer>
-          </form>
-        </div>
-      </div>
-      <div class="displayInlineBlock ck-reset-style-widget"><button id="youPush"
-          class="animated fadeIn callK anyB pushD ButtonS">
-          <div class="ckImage ckGraphic ckHeader"></div>
-        </button></div>
-      <div class="containerBillboard displayInlineBlock ck-reset-style-widget">
-        <div class="callkeeperBillboard fadeOut animated ckStyle invisible">
-          <h2 class="callkeeperS messageS" id="titleForComplete">
-            <div class="ckImage ckGraphic ckHeader"></div>
-          </h2>
-          <p class="callkeeperS messageBody" id="callMesBody"></p>
-        </div>
-      </div>
-    </section>
-  </section><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSW6FHJ" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-
-  <div id="__nuxt">
-    <!---->
-    <div id="__layout">
-      <div class="default-layout">
-        <div data-v-510120a8="" class="main-page default-layout-page">
-          <div data-v-29df3c1a="" data-v-510120a8="" class="header-root header-outer">
-            <div data-v-29df3c1a="" class="mobile-control-container">
-              <div data-v-29df3c1a="" class="mobile-control-button burger"><img data-v-29df3c1a=""
-                  src="./files/header-burger.svg"
-                  class="icon"></div> <a data-v-29df3c1a="" data-location="mainpage-common"
-                data-department="virtual-class" class="account a-clear register-button"><img data-v-29df3c1a=""
-                  src="./files/header-enter.svg"
-                  class="mobile-control-button icon"></a>
-            </div>
-            <div data-v-29df3c1a="" class="header-content standard-bg">
-              <div data-v-29df3c1a="" class="header-logo img-container"><img data-v-29df3c1a=""
-                  src="./files/header-mobile-logo.svg"
-                  class="icon mobile-icon"> <img data-v-29df3c1a=""
-                  src="./files/logo-full.svg"
-                  class="icon img desktop-icon"></div>
-              <div data-v-29df3c1a="" class="menu-block">
-                <div data-v-29df3c1a="" class="top-panel"><a data-v-29df3c1a="" href="tel:+78005553535"
-                    class="a-clear link-underline-on-hover phone">
-                    +7 (800) 555-35-35
-                  </a></div>
-              </div>
-              <div data-v-29df3c1a="" class="close-menu-button"><img data-v-29df3c1a=""
-                  src="./files/header-close.svg"
-                  class="icon"></div>
-            </div>
-          </div>
-          <div data-v-510120a8="" class="content">
-            <div data-v-779241a3="" data-v-510120a8="" class="intro-block default-site-block intro-block-outer">
-              <div data-v-779241a3="" class="logo"><img data-v-779241a3=""
-                  src="./files/logo-full.svg"
-                  class="logo-svg"></div>
-              <div data-v-779241a3="" class="title-main-block">
-                <div data-v-779241a3="" class="title-block">
-                  <h1 data-v-779241a3="" class="title-block__title">
-                    
-                  </h1>
-                  <h1 data-v-779241a3="" class="title-block__title">
-                    
-                  </h1>
-                  <h1 data-v-779241a3="" class="title-block__title">
-                    Школа#1 среди IT-школ ДАГЕСТАНА
-                  </h1>
-                  <div data-v-779241a3="" class="title-block__classes">
-                    Мы только открылись, а уже <br data-v-779241a3="">
-                    записали видеоизвенения
-                  </div>
-                  <div data-v-779241a3="" class="title-block__recruitment">
-                    Начался набор на 21/22 <br data-v-779241a3="">
-                    учебный год
-                  </div>
-
-                </div>
-              </div>
-              <div data-v-779241a3="" class="main-intro-image-container">
-                <div data-v-779241a3="" class="slogan"><img data-v-779241a3=""
-                    class="img is-visible" style="display: none;"></div>
-                <div data-v-779241a3="" class="main-intro-image"><img data-v-779241a3=""
-                    src="./files/intro-inter-progressive.jpg"
-                    class="img is-visible"></div>
-                <!---->
-              </div>
-              <div data-v-779241a3="" class="achievements-container">
-                <div data-v-779241a3="" class="achievements-list">
-                  <div data-v-6217c3a4="" data-v-779241a3="" class="achievement achievement-outer">
-                    <div data-v-6217c3a4="" class="achievement-content">
-                      <div data-v-6217c3a4="" class="achievement-info">
-                        <h2 data-v-6217c3a4="" class="achievement-title">
-                          #1 по программированию
-                        </h2>
-                        <p data-v-6217c3a4="" class="achievement-description">
-                          Кодим так, что стены от обоев отклеиваются
-                        </p>
-                      </div>
-                    </div> <img data-v-6217c3a4=""
-                      src="./files/intro-prog.png"
-                      class="achievement-img">
-                  </div>
-                  <div data-v-6217c3a4="" data-v-779241a3="" class="achievement achievement-outer">
-                    <div data-v-6217c3a4="" class="achievement-content">
-                      <div data-v-6217c3a4="" class="achievement-info">
-                        <h2 data-v-6217c3a4="" class="achievement-title">
-                          #1 по робототехнике
-                        </h2>
-                        <p data-v-6217c3a4="" class="achievement-description">
-                          Наши роботы подрывают 99 из 100 заголовков ежегодно
-                        </p>
-                      </div>
-                    </div> <img data-v-6217c3a4=""
-                      src="./files/intro-robo.png"
-                      class="achievement-img">
-                  </div>
-                  <div data-v-6217c3a4="" data-v-779241a3="" class="achievement achievement-outer">
-                    <div data-v-6217c3a4="" class="achievement-content">
-                      <div data-v-6217c3a4="" class="achievement-info">
-                        <h2 data-v-6217c3a4="" class="achievement-title">
-                          #1 по кибербезопасности
-                        </h2>
-                        <p data-v-6217c3a4="" class="achievement-description">
-                          Ломаем США - сваливаем вину на Россию
-                        </p>
-                      </div>
-                    </div> <img data-v-6217c3a4=""
-                      src="./files/intro-cyber.png"
-                      class="achievement-img">
-                  </div>
-                </div>
-              </div>
-              <div data-v-779241a3="" class="alt-intro-image"><img data-v-779241a3=""
-                  class="img"></div>
-              <div data-v-77d5885e="" data-v-779241a3="" class="block-delimiter-root">
-                <div data-v-77d5885e="" class="block-delimiter below-viewport in-viewport" data-in-viewport="i0">
-                  <div data-v-77d5885e="" class="main-part"></div>
-                  <div data-v-77d5885e="" class="left-part"></div>
-                  <div data-v-77d5885e="" class="middle-part"></div>
-                  <div data-v-77d5885e="" class="right-part"></div>
-                </div>
-              </div>
-              <!---->
-            </div>
-            <div data-v-2616d7ed="" data-v-510120a8="" class="block-popup block-with-popup">
-              <!---->
-            </div>
-            <div data-v-2066e63f="" data-v-510120a8="" class="why-us-block default-site-block standard-bg">
-              <h2 data-v-2066e63f="" class="block-title below-viewport in-viewport" data-in-viewport="i1">
-                Почему стоит выбрать iKunakSchool?
-              </h2>
-              <div data-v-2066e63f="" class="gallery">
-                <div data-v-2066e63f="" class="gallery-block gallery-block-upper">
-                  <div data-v-2066e63f="" class="images-container">
-                    <div data-v-2066e63f="" class="left-images-block"><img data-v-2066e63f=""
-                        src="./files/why-us-lower-mobile.jpeg"
-                        class="img upper-img"> <img data-v-2066e63f=""
-                        src="./files/why-us-upper-1.jpeg"
-                        class="img lower-img"></div>
-                    <div data-v-2066e63f="" class="middle-images-block img-container"><img data-v-2066e63f=""
-                        src="./files/why-us-upper-mobile.jpeg"
-                        class="img"></div>
-                  </div>
-                  <div data-v-2066e63f="" class="text-container accent-bg">
-                    <div data-v-2066e63f="" class="img-container"><img data-v-2066e63f=""
-                        src="./files/why-us-upper-mobile.jpeg"
-                        class="img"></div>
-                    <p data-v-2066e63f="" class="text">
-                      ОПИСАНИЕ 1
-                    </p>
-                  </div>
-                  <div data-v-2066e63f="" class="right-images-block img-container"><img data-v-2066e63f=""
-                      src="./files/why-us-upper-2.jpeg"
-                      class="img"></div>
-                </div>
-                <div data-v-2066e63f="" class="gallery-block gallery-block-middle">
-                  <div data-v-2066e63f="" class="empty-block img-container"></div>
-                  <div data-v-2066e63f="" class="left-images-block img-container"><img data-v-2066e63f=""
-                      src="./files/why-us-middle-1.jpeg"
-                      class="img"></div>
-                  <div data-v-2066e63f="" class="text-container standard-bg">
-                    <div data-v-2066e63f="" class="img-container"><img data-v-2066e63f=""
-                        class="img"></div>
-                    <p data-v-2066e63f="" class="text">
-                      ОПИСАНИЕ 2
-                    </p>
-                  </div>
-                  <div data-v-2066e63f="" class="right-images-block img-container"><img data-v-2066e63f=""
-                      src="./files/why-us-middle-2.jpeg"
-                      class="img"></div>
-                </div>
-
-              </div>
-              <div data-v-77d5885e="" data-v-2066e63f="" class="block-delimiter-root reverted">
-                <div data-v-77d5885e="" class="block-delimiter below-viewport in-viewport" data-in-viewport="i2">
-                  <div data-v-77d5885e="" class="main-part"></div>
-                  <div data-v-77d5885e="" class="left-part"></div>
-                  <div data-v-77d5885e="" class="middle-part"></div>
-                  <div data-v-77d5885e="" class="right-part"></div>
-                </div>
-              </div>
-            </div>
-            <div data-v-1945ff0a="" data-v-510120a8="" class="enrollment-block default-site-block">
-              <div data-v-1945ff0a="" class="title-container">
-                <p data-v-1945ff0a="" class="text" style="font-size: 1.4rem;">
-                  В iKunakSchool дети могут выбрать одну из трех форм обучения: Kunak - доступ к записям и заданиям,
-                  Goretz — живое общение в дистанционном формате, или Shaitan — гибкое обучение в комфортном
-                  темпе.
-                </p>
-              </div>
-              <div data-v-1945ff0a="" class="education-types-container">
-                <div data-v-1945ff0a="" class="education-types-slider">
-                  <div data-v-1945ff0a=""
-                    class="swiper-container swiper-container-initialized swiper-container-horizontal">
-                    <div data-v-1945ff0a="" class="swiper-wrapper"
-                      style="transition: all 0ms ease 0s; transform: translate3d(-525px, 0px, 0px);">
-                      <div data-v-195718d0="" data-v-1945ff0a=""
-                        class="education-type swiper-slide swiper-slide-duplicate swiper-slide-prev"
-                        data-swiper-slide-index="2" style="width: 505px; margin-right: 20px;">
-                        <div data-v-195718d0="" class="education-img"><img data-v-195718d0=""
-                            src="./files/enrollment-slide-3.png"
-                            class="img"></div>
-                        <div data-v-195718d0="" class="education-type-title">
-                          <h2 data-v-195718d0="" class="title">
-                            Shaitan
-                          </h2>
+    <div class="uk-section-secondary uk-light">
+        <div
+            uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky dark; top: 100">
+            <nav class="uk-navbar-container uk-navbar-transparent uk-light">
+                <div class="uk-container uk-container-expand">
+                    <div uk-navbar>
+                        <div class="nav">
+                            <a style="white-space: nowrap;" class="nav-item uk-text-lead" href="index.html"><span
+                                    class="logo">iK</span><span>unakSchool</span></a></li>
+                            <span class="nav-item nav-item-grow"></span>
+                            <a class="nav-item" href="#">Посмотри пробный урок</a>
+                            <a class="nav-item" href="#">Работай у нас!</a>
+                            <a class="nav-item" style="text-align: right;" href="#" title="+7999999999">+7999999999</a>
                         </div>
-                        <div data-v-195718d0="" class="education-features">
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Для какого возраста?
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                5-10 классы
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Размер группы
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Групповые занятия с преподавателем и ментором
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Социализация
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Общение с одноклассниками и преподавателем через чат
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                График занятий
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Регулярные занятия с доступом к записи на следующий день после эфира
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Пропуск занятия
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Бессрочный доступ к записям занятий после эфира
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Темп обучения
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Возможность учиться в удобном темпе, получая все преимущества освоения программы по
-                                методике школы
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Место обучения
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Обучение из любой точки мира
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Безопасность
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Абсолютная безопасность, обучение проходит дома
-                              </p>
-                            </div>
-                          </div>
-                          <div data-v-195718d0="" class="education-feature">
-                            <div data-v-195718d0="" class="feature-title-container">
-                              <p data-v-195718d0="" class="feature-title">
-                                Для кого?
-                              </p>
-                            </div>
-                            <div data-v-195718d0="" class="feature-description-container">
-                              <p data-v-195718d0="" class="feature-description">
-                                Дисциплинированным и мотивированным ученикам, а также для тех, у кого нет возможности
-                                посещать занятия по фиксированному графику (ученики спортивных и др. секций)
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-                <div data-v-1945ff0a="" class="education-types">
-                  <div data-v-1945ff0a="" class="vgt-wrap ">
-                    <!---->
-                    <div class="vgt-inner-wrap">
-                      <!---->
-                      <!---->
-                      <!---->
-                      <div class="vgt-fixed-header">
-                        <!---->
-                      </div>
-                      <div class="vgt-responsive">
-                        <table class="vgt-table bordered ">
-                          <thead data-v-2d1e3c02="">
-                            <tr data-v-2d1e3c02="">
-                              <!---->
-                              <!---->
-                              <th data-v-2d1e3c02="" class="vgt-left-align empty"
-                                style="min-width: 13%; max-width: 13%; width: 13%;"><span data-v-1945ff0a=""
-                                  data-v-2d1e3c02="">
-
-                                </span></th>
-                              <th data-v-2d1e3c02="" class="vgt-left-align default-heading"
-                                style="min-width: 29%; max-width: 29%; width: 29%;">
-                                <div data-v-1945ff0a="" data-v-2d1e3c02="" class="header-cell">
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="img-container"><img
-                                      data-v-1945ff0a="" data-v-2d1e3c02=""
-                                      src="./files/enrollment-slide-1.png"
-                                      class="img"></div>
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="education-type-title">
-                                    <h2 data-v-1945ff0a="" data-v-2d1e3c02="" class="title">
-                                      Kunak
-                                    </h2>
-                                  </div>
-                                </div>
-                              </th>
-                              <th data-v-2d1e3c02="" class="vgt-left-align default-heading"
-                                style="min-width: 29%; max-width: 29%; width: 29%;">
-                                <div data-v-1945ff0a="" data-v-2d1e3c02="" class="header-cell">
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="img-container"><img
-                                      data-v-1945ff0a="" data-v-2d1e3c02=""
-                                      src="./files/enrollment-slide-2.png"
-                                      class="img"></div>
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="education-type-title">
-                                    <h2 data-v-1945ff0a="" data-v-2d1e3c02="" class="title">
-                                      Gorets
-                                    </h2>
-                                  </div>
-                                </div>
-                              </th>
-                              <th data-v-2d1e3c02="" class="vgt-left-align default-heading"
-                                style="min-width: 29%; max-width: 29%; width: 29%;">
-                                <div data-v-1945ff0a="" data-v-2d1e3c02="" class="header-cell">
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="img-container"><img
-                                      data-v-1945ff0a="" data-v-2d1e3c02=""
-                                      src="./files/enrollment-slide-3.png"
-                                      class="img"></div>
-                                  <div data-v-1945ff0a="" data-v-2d1e3c02="" class="education-type-title">
-                                    <h2 data-v-1945ff0a="" data-v-2d1e3c02="" class="title">
-                                      Shaitan
-                                    </h2>
-                                  </div>
-                                </div>
-                              </th>
-                            </tr>
-                            <!---->
-                          </thead>
-                          <tbody>
-                            <!---->
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  Социализация
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Врагов нет! У нас - только друзья
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Все одногруппники - братья на всю жизнь
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Тебе каждый как кровный брат
-                                </span></td>
-                            </tr>
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  График занятий
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Регулярные занятия по расписанию
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Регулярные занятия по расписанию
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Регулярные занятия с доступом к записи на следующий день после эфира
-                                </span></td>
-                            </tr>
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  Пропуск занятия
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  В случае пропуска занятия, доказываешь правоту кровью
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  В случае пропуска занятия, братаешься с горцами
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Бессрочный доступ к записям занятий
-                                </span></td>
-                            </tr>
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  Темп обучения
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Индивидуальный подход к каждому ученику, темп обучения поддерживает преподаватель
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Индивидуальный подход к каждому ученику, темп обучения поддерживает преподаватель
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Возможность учиться в удобном темпе, получая все преимущества освоения программы по
-                                  методике
-                                </span></td>
-                            </tr>
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  Безопасность
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Бандиты боятся
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Люди боятся
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  П*тин боится!
-                                </span></td>
-                            </tr>
-                            <tr class=" feature-row">
-                              <!---->
-                              <!---->
-                              <td class="vgt-left-align feature-title"><span data-v-1945ff0a="">
-                                  Для кого?
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Кому сложно оторваться от собачьих боев и социальных сетей, есть возможность заниматься по
-                                  постоянному расписанию, требуется дополнительное внимание и мотивация
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Кому сложно оторваться от собачьих боев и социальных сетей, есть возможность заниматься по
-                                  постоянному расписанию, требуется дополнительное внимание и мотивация со стороны
-                                  преподавателя
-                                </span></td>
-                              <td class="vgt-left-align default-cell"><span data-v-1945ff0a="">
-                                  Дисциплинированным и мотивированным шайтанам, а также для тех, у кого нет возможности
-                                  посещать занятия по фиксированному графику (ученики бойцовских и др. секций)
-                                </span></td>
-                            </tr>
-                            <!---->
-                          </tbody>
-                          <!---->
-                        </table>
-                      </div>
-                      <!---->
-                      <!---->
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-v-77d5885e="" data-v-1945ff0a="" class="block-delimiter-root">
-                <div data-v-77d5885e="" class="block-delimiter below-viewport in-viewport" data-in-viewport="i5">
-                  <div data-v-77d5885e="" class="main-part"></div>
-                  <div data-v-77d5885e="" class="left-part"></div>
-                  <div data-v-77d5885e="" class="middle-part"></div>
-                  <div data-v-77d5885e="" class="right-part"></div>
-                </div>
-              </div>
-            </div>
-            <div data-v-63e753f6="" data-v-510120a8="" class="after-edu-block default-site-block standard-bg">
-              <h2 data-v-63e753f6="" class="block-title in-viewport" data-in-viewport="i6">
-                Что ждет после обучения в iKunakSchool?
-              </h2>
-              <div data-v-63e753f6="" class="reviews-container">
-                <div data-v-63e753f6="" class="reviews-list">
-                  <div data-v-13ea223c="" data-v-63e753f6="" class="review review-outer">
-                    <div data-v-13ea223c="" class="author-photo img-container"><img data-v-13ea223c=""
-                        src="./files/after-edu-review-1.png"
-                        class="img rounded"></div>
-                    <div data-v-13ea223c="" class="review-text">
-                      <p data-v-13ea223c="" class="text">
-                        ОТЗЫВ 1
-                        <img data-v-13ea223c=""
-                          src="./files/more-arrows.svg"
-                          alt="" class="more-arrows" style="display: none;">
-                      </p>
-                      <div data-v-13ea223c="" class="author-container"><span data-v-13ea223c="" class="author">ЧЕЛ 1</span>
-                        <p data-v-13ea223c="" class="occupation">
-
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-v-13ea223c="" data-v-63e753f6="" class="review review-outer">
-                    <div data-v-13ea223c="" class="author-photo img-container"><img data-v-13ea223c=""
-                        src="./files/after-edu-review-2.png"
-                        class="img rounded"></div>
-                    <div data-v-13ea223c="" class="review-text">
-                      <p data-v-13ea223c="" class="text">
-                        ОТЗЫВ 2
-                      </p>
-                      <div data-v-13ea223c="" class="author-container"><span data-v-13ea223c="" class="author">ЧЕЛ 2</span>
-                        <p data-v-13ea223c="" class="occupation">
-
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-v-13ea223c="" data-v-63e753f6="" class="review review-outer">
-                    <div data-v-13ea223c="" class="author-photo img-container"><img data-v-13ea223c=""
-                        src="./files/after-edu-review-3.png"
-                        class="img rounded"></div>
-                    <div data-v-13ea223c="" class="review-text">
-                      <p data-v-13ea223c="" class="text">
-                        ОТЗЫВ 3
-                      </p>
-                      <div data-v-13ea223c="" class="author-container"><span data-v-13ea223c="" class="author">ЧЕЛ 3</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-v-63e753f6="" class="companies-container">
-                <h3 data-v-63e753f6="" class="block-title below-viewport in-viewport" data-in-viewport="i7">
-                  Наши выпускники будут работать в компаниях
-                </h3>
-                <div data-v-63e753f6="" class="companies-list">
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-1.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-2.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-3.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-4.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-5.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-6.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-7.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-8.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-9.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-10.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-11.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-12.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-13.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-14.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-15.png"
-                      class="img"></div>
-                  <div data-v-63e753f6="" class="company img-container"><img data-v-63e753f6=""
-                      src="./files/after-edu-companies-16.png"
-                      class="img"></div>
-                </div>
-              </div>
-              <div data-v-77d5885e="" data-v-63e753f6="" class="block-delimiter-root reverted">
-                <div data-v-77d5885e="" class="block-delimiter below-viewport in-viewport" data-in-viewport="i8">
-                  <div data-v-77d5885e="" class="main-part"></div>
-                  <div data-v-77d5885e="" class="left-part"></div>
-                  <div data-v-77d5885e="" class="middle-part"></div>
-                  <div data-v-77d5885e="" class="right-part"></div>
-                </div>
-              </div>
-            </div>
-            <div data-v-3b8bde1e="" data-v-510120a8="" class="partners-block default-site-block standard-bg">
-              <h2 data-v-3b8bde1e="" class="block-title below-viewport in-viewport" data-in-viewport="i11">
-                Партнеры iKunakSchool
-              </h2>
-              <div data-v-3b8bde1e="" class="partners-list">
-                <div data-v-2e83cb5c="" data-v-3b8bde1e="" class="partner partner-outer">
-                  <div data-v-2e83cb5c="" class="partner-info">
-                    <div data-v-2e83cb5c="" class="partner-icon img-container"><img data-v-2e83cb5c=""
-                        src="./files/partners-partner-icon-1.svg"
-                        class="img"></div>
-                    <p data-v-2e83cb5c="" class="partner-text">
-                      В 2021 году совместно с Яндекс iKunakSchool открывает специальное московское общежитие,
-                      которое занимается трудоустройством выпускников на стройки столицы России.
-                    </p>
-                  </div>
-                </div>
-                <div data-v-2e83cb5c="" data-v-3b8bde1e="" class="partner partner-outer">
-                  <div data-v-2e83cb5c="" class="partner-info">
-                    <div data-v-2e83cb5c="" class="partner-icon img-container"><img data-v-2e83cb5c=""
-                        src="./files/partners-partner-icon-2.svg"
-                        class="img"></div>
-                    <p data-v-2e83cb5c="" class="partner-text">
-                      На базе Факультета компьютерных наук Высшей школы экономики будет организован совместный проект,
-                      позволяющий учащимся приобрести знания в области программирования
-                      и информационных технологий
-                    </p>
-                  </div>
-                </div>
-                <div data-v-2e83cb5c="" data-v-3b8bde1e="" class="partner partner-outer">
-                  <div data-v-2e83cb5c="" class="partner-info">
-                    <div data-v-2e83cb5c="" class="partner-icon img-container"><img data-v-2e83cb5c=""
-                        src="./files/partners-partner-icon-3.svg"
-                        class="img"></div>
-                    <p data-v-2e83cb5c="" class="partner-text">
-                      iKunakSchool - один из первых резидентов Физтехпарк и единственная образовательная
-                      организация для школьников на территории Дагестана
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div data-v-77d5885e="" data-v-3b8bde1e="" class="block-delimiter-root reverted">
-                <div data-v-77d5885e="" class="block-delimiter below-viewport" data-in-viewport="i13">
-                  <div data-v-77d5885e="" class="main-part"></div>
-                  <div data-v-77d5885e="" class="left-part"></div>
-                  <div data-v-77d5885e="" class="middle-part"></div>
-                  <div data-v-77d5885e="" class="right-part"></div>
-                </div>
-              </div>
-            </div>
-            <div data-v-2300858d="" data-v-510120a8="" class="begin-block default-site-block">
-              <h2 data-v-2300858d="" class="block-title below-viewport" data-in-viewport="i14">
-                Как начать учиться в iKunakSchool?
-              </h2>
-              <div data-v-2300858d="" class="begin-text-container">
-                <p data-v-2300858d="" class="text" style="font-size: 1.8rem;">
-                  В iKunakSchool могут поступить все желающие от 0 до 99 лет, выбрав пакет обучения: KUNAK,
-                  GORETS или SHAITAN.
-                </p>
-                <div data-v-2300858d="" class="exam-text-container">
-                  <p data-v-2300858d="" class="text" style="font-size: 1.4rem;">
-                    Школьники поступают по результатам открытого онлайн урока - тестирования.
-                  </p>
-                  <p data-v-2300858d="" class="text" style="font-size: 1.4rem;">
-                    Окончившие школу поступают по результатам вступительного экзамена.
-                  </p>
-                </div>
-              </div>
-              <div data-v-2300858d="" class="registration-stages-container">
-                <div data-v-2300858d="" class="registration-stage-item">
-                  <div data-v-01521a4a="" data-v-2300858d="" class="registration-stage registration-stage-outer">
-                    <div data-v-01521a4a="" class="stage-icon-container"><span data-v-01521a4a=""
-                        class="stage-count block-title">
-                        1.
-                      </span>
-                      <div data-v-01521a4a="" class="img-container"><img data-v-01521a4a=""
-                          src="./files/begin-img-1.png"
-                          class="img stage-icon"></div>
-                    </div>
-                    <p data-v-01521a4a="" class="stage-description">
-                      Зарегистрироваться
-                    </p>
-                  </div>
-                  <div data-v-2300858d="" class="arrow-container"><img data-v-2300858d=""
-                      class="arrow"></div>
-                </div>
-                <div data-v-2300858d="" class="registration-stage-item">
-                  <div data-v-01521a4a="" data-v-2300858d="" class="registration-stage registration-stage-outer">
-                    <div data-v-01521a4a="" class="stage-icon-container"><span data-v-01521a4a=""
-                        class="stage-count block-title">
-                        2.
-                      </span>
-                      <div data-v-01521a4a="" class="img-container"><img data-v-01521a4a=""
-                          src="./files/begin-img-2.png"
-                          class="img stage-icon"></div>
-                    </div>
-                    <p data-v-01521a4a="" class="stage-description">
-                      Пройти тестирование или сдать вступительный экзамен
-                    </p>
-                  </div>
-                  <div data-v-2300858d="" class="arrow-container"><img data-v-2300858d=""
-                      class="arrow"></div>
-                </div>
-                <div data-v-2300858d="" class="registration-stage-item">
-                  <div data-v-01521a4a="" data-v-2300858d="" class="registration-stage registration-stage-outer">
-                    <div data-v-01521a4a="" class="stage-icon-container"><span data-v-01521a4a=""
-                        class="stage-count block-title">
-                        3.
-                      </span>
-                      <div data-v-01521a4a="" class="img-container"><img data-v-01521a4a=""
-                          src="./files/begin-img-3.png"
-                          class="img stage-icon"></div>
-                    </div>
-                    <p data-v-01521a4a="" class="stage-description">
-                      Выбрать удобное расписание и начать обучение
-                    </p>
-                  </div>
-                  <div data-v-2300858d="" class="arrow-container"><img data-v-2300858d=""
-                      class="arrow"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </nav>
         </div>
-      </div>
     </div>
-  </div>
+    <div class="uk-section-secondary uk-light gradient">
+        <div class="uk-container uk-container-small">
+            <div style="display: flex; flex-direction: column;">
+                <h1 class="glitch"
+                    style="font-weight: 900; align-self: center; margin: 40px; text-align: center; font-size: 3rem;">
+                    Школа#1 среди IT-школ ДАГЕСТАНА</h1>
+                <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                    <div style="overflow: visible; width: 0; height: 80vh;">
+                        <div class="island-big" uk-parallax="bgy: 50"></div>
+                    </div>
+                    <div>
+                        <div class="uk-text-large"
+                            style="position: relative; color: rgb(255, 255, 255);font-weight: 900; text-align: right; z-index: 1;">
+                            Мы только открылись, а уже<br>
+                            записали видеоизвенения
+                        </div>
+                        <div class="uk-text-large"
+                            style="position: relative; color: rgb(255, 208, 0);font-weight: 900; text-align: right; z-index: 1;">
+                            Начался набор на 21/22<br>
+                            учебный год
+                        </div>
+                        <div style="overflow: visible; width: 0; height: 80vh;">
+                            <div class="island-small" uk-parallax="bgy: -150"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="uk-section uk-section-large uk-section-secondary uk-light">
+        <div class="uk-container uk-container" style="position: relative; z-index: 3;">
+            <div class="uk-child-width-expand@m uk-text-center" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-body" style="margin-bottom: 100px;"
+                        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 100px;">
+                            <img src="assets/macbook.png" alt=""
+                                style="position: relative; top: -80px; max-height: 200px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">#1 ПО КОДУ</h3>
+                            <p>КОДИМ ТАК, ЧТО СТЕНЫ ОТ ОБОЕВ ОТКЛЕИВАЮТСЯ</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 100px;">
+                            <img src="assets/robot.png" alt=""
+                                style="position: relative; top: -180px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">#1 ПО РОБОТАМ</h3>
+                            <p>НАШИ РОБОТЫ ПОДРЫВАЮТ 99 ИЗ 100 ЗАГОЛОВКОВ ЕЖЕГОДНО</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-body" uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 40px;">
+                            <img src="assets/anon.png" alt=""
+                                style="position: relative; top: -150px; max-height: 200px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">#1 ПО ИНФБЕЗУ</h3>
+                            <p>ЛОМАЕМ США - СВАЛИВАЕМ ВИНУ НА РОССИЮ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-section uk-section-default">
+        <div class="uk-container uk-container-expand" style="padding-left: 0 !important; padding-right: 0 !important;">
+            <hr class="uk-divider-icon">
+            <h1 style="font-weight: 900; align-self: center; margin: 40px; text-align: center; font-size: 3rem;">Почему
+                стоит выбрать<br><span class="glitch">iKunakSchool</span>?</h1>
+            <hr class="uk-divider-icon">
+            <div class="uk-child-width-1-2 uk-child-width-1-4@xl uk-grid-collapse" uk-grid="masonry: true">
+                <div>
+                    <img src="assets/why-us-lower-mobile.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="assets/why-us-upper-mobile.jpeg" alt="">
+                </div>
+                <div>
+                    <div class="uk-card-secondary uk-padding uk-flex uk-flex-center uk-flex-middle">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nostrum voluptatem dolor
+                        eligendi deleniti ab distinctio, quo ipsa unde provident repellat molestias explicabo laudantium
+                        perspiciatis corporis iste vitae reprehenderit quam?
+                        Placeat amet, saepe rem aliquid reprehenderit incidunt sunt tempore qui, veritatis nostrum
+                        doloribus quos eligendi debitis eius! Libero voluptatum delectus facere dolore, harum fuga a
+                        fugit consequuntur, exercitationem blanditiis omnis!
+                        Magnam praesentium perspiciatis aliquid, perferendis porro molestias vitae quis laboriosam
+                        reiciendis omnis laborum veritatis recusandae nulla obcaecati iste, odit aperiam expedita minus
+                        dignissimos commodi explicabo esse veniam vel? Deserunt, qui.
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/why-us-upper-2.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="assets/why-us-middle-1.jpeg" alt="">
+                </div>
+                <div>
+                    <div class="uk-card-default uk-padding uk-flex uk-flex-center uk-flex-middle">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nostrum voluptatem dolor
+                        eligendi deleniti ab distinctio, quo ipsa unde provident repellat molestias explicabo laudantium
+                        perspiciatis corporis iste vitae reprehenderit quam?
+                        Placeat amet, saepe rem aliquid reprehenderit incidunt sunt tempore qui, veritatis nostrum
+                        doloribus quos eligendi debitis eius! Libero voluptatum delectus facere dolore, harum fuga a
+                        fugit consequuntur, exercitationem blanditiis omnis!
+                        Magnam praesentium perspiciatis aliquid, perferendis porro molestias vitae quis laboriosam
+                        reiciendis omnis laborum veritatis recusandae nulla obcaecati iste, odit aperiam expedita minus
+                        dignissimos commodi explicabo esse veniam vel? Deserunt, qui.
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/why-us-upper-1.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="assets/why-us-middle-2.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-secondary uk-light gradient">
+        <div class="uk-container uk-container-large">
+            <h3>В <span class="glitch">iKunakSchool</span> дети могут выбрать одну из трех форм обучения: <span
+                    class="glitch">Kunak</span> - доступ к записям и заданиям, <span class="glitch">Gorets</span> —
+                живое общение в дистанционном формате, или <span class="glitch">Shaitan</span> — гибкое обучение в
+                комфортном темпе.</h3>
+            <div class="uk-child-width-expand@l uk-text-center" uk-grid style="margin-top: 100px;">
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/enrollment-slide-1.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">Kunak</span></h3>
+                            <ul class="uk-list uk-list-divider  uk-text-emphasis">
+                                <li><span class="uk-text-bold">Социализация: </span>Врагов нет! У нас - только друзья</li>
+                                <li><span class="uk-text-bold">График: </span>Регулярные занятия по расписанию</li>
+                                <li><span class="uk-text-bold">Пропуск занятия: </span>В случае пропуска занятия, доказываешь правоту кровью</li>
+                                <li><span class="uk-text-bold">Темп: </span>Индивидуальный подход к каждому ученику, темп обучения поддерживает преподаватель</li>
+                                <li><span class="uk-text-bold">Безопасность: </span>Бандиты боятся</li>
+                                <li><span class="uk-text-bold">Для кого? </span>Кому сложно оторваться от собачьих боев и социальных сетей, есть возможность заниматься по постоянному расписанию, требуется дополнительное внимание и мотивация</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/enrollment-slide-2.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">Gorets</span></h3>
+                            <ul class="uk-list uk-list-divider  uk-text-emphasis">
+                                <li><span class="uk-text-bold">Социализация: </span>Все одногруппники - братья на всю жизнь</li>
+                                <li><span class="uk-text-bold">График: </span>Регулярные занятия по расписанию</li>
+                                <li><span class="uk-text-bold">Пропуск занятия: </span>В случае пропуска занятия, братаешься с горцами</li>
+                                <li><span class="uk-text-bold">Темп: </span>Индивидуальный подход к каждому ученику, темп обучения поддерживает преподаватель</li>
+                                <li><span class="uk-text-bold">Безопасность: </span>Люди боятся</li>
+                                <li><span class="uk-text-bold">Для кого? </span>Кому сложно оторваться от собачьих боев и социальных сетей, есть возможность заниматься по постоянному расписанию, требуется дополнительное внимание и мотивация со стороны преподавателя</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/enrollment-slide-3.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">Shaitan</span></h3>
+                            <ul class="uk-list uk-list-divider  uk-text-emphasis">
+                                <li><span class="uk-text-bold">Социализация: </span>Тебе каждый как кровный брат</li>
+                                <li><span class="uk-text-bold">График: </span>Регулярные занятия с доступом к записи на следующий день после эфира</li>
+                                <li><span class="uk-text-bold">Пропуск занятия: </span>Бессрочный доступ к записям занятий</li>
+                                <li><span class="uk-text-bold">Темп: </span>Возможность учиться в удобном темпе, получая все преимущества освоения программы по методике</li>
+                                <li><span class="uk-text-bold">Безопасность: </span>Сам себя боишься!</li>
+                                <li><span class="uk-text-bold">Для кого? </span>Возможность учиться в удобном темпе, получая все преимущества освоения программы по методике</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="uk-section uk-section-default">
+        <div class="uk-container uk-container-expand" style="padding-left: 0 !important; padding-right: 0 !important;">
+            <hr class="uk-divider-icon">
+            <h1 style="font-weight: 900; align-self: center; margin: 40px; text-align: center; font-size: 3rem;">Что ждет после обучения в <span class="glitch">iKunakSchool</span>?</h1>
+            <hr class="uk-divider-icon">
+            <div class="uk-child-width-1-3@l" uk-grid="masonry: true">
+                <div>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1" uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="assets/review-1.jpg" width="80" height="80" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                    <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">8 days ago</a></p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1" uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="assets/review-2.jpg" width="80" height="80" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                    <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">5 days ago</a></p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1" uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="assets/review-3.jpg" width="80" height="80" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                    <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">2 days ago</a></p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-section uk-section-large uk-section-secondary uk-light">
+        <div class="uk-container uk-container" style="position: relative; z-index: 3;">
+            <h1 style="font-weight: 900; align-self: center; margin: 40px; text-align: center; font-size: 3rem;">Выпускники <span class="glitch">iKunakSchool</span> будут работать в крупных компаниях!</h1>
+                <div class="uk-flex-center" uk-grid>
+                    <div><img class="company" src="./assets/after-edu-companies-2.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-1.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-3.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-4.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-5.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-6.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-7.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-8.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-9.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-10.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-11.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-12.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-13.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-14.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-15.png" alt=""></div>
+                    <div><img class="company" src="./assets/after-edu-companies-16.png" alt=""></div>
+                </div>
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default">
+        <div class="uk-container uk-container" style="padding-left: 0 !important; padding-right: 0 !important;">
+            <hr class="uk-divider-icon">
+            <h1 style="font-weight: 900; align-self: center; margin: 40px; text-align: center; font-size: 3rem;">Главные партнеры <span class="glitch">iKunakSchool</span></h1>
+            <hr class="uk-divider-icon">
+            <div class="uk-child-width-1-3@l" uk-grid style="margin: 20px 30px;">
+                <div uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                    <div class="uk-card-media-top">
+                        <img src="assets/partners-partner-icon-1.svg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <p>В 2021 году совместно с Яндекс iKunakSchool открывает специальное московское общежитие,
+                            которое занимается трудоустройством выпускников на стройки столицы России.</p>
+                    </div>
+                </div>
+                <div uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                    <div class="uk-card-media-top">
+                        <img src="assets/partners-partner-icon-2.svg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <p>На базе Факультета компьютерных наук Высшей школы экономики будет организован совместный проект,
+                          позволяющий учащимся приобрести знания в области программирования
+                          и информационных технологий</p>
+                    </div>
+                </div>
+                <div uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                    <div class="uk-card-media-top">
+                        <img src="assets/partners-partner-icon-3.svg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <p>iKunakSchool - один из первых резидентов Физтехпарк и единственная образовательная
+                            организация для школьников на территории Дагестана</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-section uk-section-secondary uk-light gradient">
+        <div class="uk-container uk-container-large">
+            <h1>В <span class="glitch">iKunakSchool</span> могут поступить все желающие от 0 до 99 лет, выбрав пакет обучения!</h1>
+            <ul class="uk-list uk-list-divider  uk-text-emphasis">
+                <li><span class="uk-text-bold">Школьники поступают по результатам открытого онлайн урока - тестирования.</span></li>
+                <li><span class="uk-text-bold">Окончившие школу поступают по результатам вступительного экзамена.</span></li>
+            </ul>
+            <div class="uk-child-width-expand@l uk-text-center" uk-grid style="margin-top: 100px;">
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/begin-img-1.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">1.</span> Зарегистрироваться</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/begin-img-2.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">2.</span> Пройти тестирование или сдать вступительный экзамен</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-dark uk-card-body" style="margin-bottom: 50px;"
+                        uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true">
+                        <div class="uk-card-media-top" style="height: 60px;">
+                            <img src="assets/begin-img-3.png" alt=""
+                                style="position: relative; top: -170px; max-height: 300px;">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title"><span class="glitch">3.</span> Выбрать удобное расписание и начать обучение</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
